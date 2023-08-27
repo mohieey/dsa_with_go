@@ -7,17 +7,18 @@ import (
 
 func main() {
 
-	stack := dswithgo.Stack{}
-	stack.Print()
+	queue := dswithgo.Queue{}
+	queue.Print()
 
 	values := []int{10, 20, 30, 5, 7, 9, 11, 13, 15, 17}
 	for _, v := range values {
-		stack.Push(v)
+		queue.Enqueue(v)
 	}
 
-	stack.Print()
+	queue.Print()
 
-	fmt.Println(stack.Pop())
-	stack.Print()
+	fmt.Println(queue.Dequeue())
+	fmt.Println(queue.Dequeue())
+	queue.Print()
 
 }
