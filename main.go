@@ -6,20 +6,22 @@ import (
 )
 
 func main() {
+
+	linkedList := dswithgo.LinkedList{}
+
 	values := []int{10, 20, 30, 5, 7, 9, 11, 13, 15, 17}
-
-	heap := dswithgo.MaxHeap{}
-	fmt.Println(heap)
-
 	for _, v := range values {
-		heap.Insert(v)
-		fmt.Println(heap)
+		linkedList.Prepend(v)
 	}
 
-	for i := 0; i < 5; i++ {
+	linkedList.Print()
+	fmt.Println(linkedList.Length)
 
-		heap.Extract()
-		fmt.Println(heap)
-	}
+	fmt.Println(linkedList.RemoveValue(9))
+	fmt.Println(linkedList.RemoveValue(55))
+	fmt.Println(linkedList.RemoveValue(17))
+
+	linkedList.Print()
+	fmt.Println(linkedList.Length)
 
 }
