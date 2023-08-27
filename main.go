@@ -7,21 +7,17 @@ import (
 
 func main() {
 
-	linkedList := dswithgo.LinkedList{}
+	stack := dswithgo.Stack{}
+	stack.Print()
 
 	values := []int{10, 20, 30, 5, 7, 9, 11, 13, 15, 17}
 	for _, v := range values {
-		linkedList.Prepend(v)
+		stack.Push(v)
 	}
 
-	linkedList.Print()
-	fmt.Println(linkedList.Length)
+	stack.Print()
 
-	fmt.Println(linkedList.RemoveValue(9))
-	fmt.Println(linkedList.RemoveValue(55))
-	fmt.Println(linkedList.RemoveValue(17))
-
-	linkedList.Print()
-	fmt.Println(linkedList.Length)
+	fmt.Println(stack.Pop())
+	stack.Print()
 
 }
