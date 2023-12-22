@@ -1,24 +1,20 @@
 package main
 
 import (
-	"dsa_with_go/dswithgo"
+	"dsa_with_go/tree"
 	"fmt"
 )
 
 func main() {
+	tree := tree.Tree{}
 
-	queue := dswithgo.Queue{}
-	queue.Print()
+	tree.Insert(9)
+	tree.Insert(4)
+	tree.Insert(6)
+	tree.Insert(20)
+	tree.Insert(170)
+	tree.Insert(15)
+	tree.Insert(1)
 
-	values := []int{10, 20, 30, 5, 7, 9, 11, 13, 15, 17}
-	for _, v := range values {
-		queue.Enqueue(v)
-	}
-
-	queue.Print()
-
-	fmt.Println(queue.Dequeue())
-	fmt.Println(queue.Dequeue())
-	queue.Print()
-
+	fmt.Println(tree.Lookup(4))
 }
