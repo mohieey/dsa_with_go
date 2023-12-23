@@ -17,4 +17,8 @@ func main() {
 	tree.Insert(1)
 
 	fmt.Println(tree.Lookup(4))
+	fmt.Println(tree.BFS())
+	fmt.Println(tree.DFSInOrder())
+	fmt.Println(tree.DFSPreOrder())
+	fmt.Println(tree.DFSPostOrder())
 }
